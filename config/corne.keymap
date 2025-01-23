@@ -57,13 +57,13 @@
                 };
                 second_layer {
     // -----------------------------------------------------------------------------------------
-    // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-    // | CAPS |     |  [  |  ]  |  (  |  )  |   | LFT | DWN |  UP | RGT |  -_ |  +=  |
-    // | SHFT |     |  {  |  }  |     |     |   |  [  |  ]  |     |     |  /| |      |
+    // |  TAB |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+    // |      | CAPS |  [  |  ]  |  (  |  )  |   | LFT | DWN |  UP | RGT |  -_ |  +=  |
+    // | SHFT |      |  {  |  }  |     |     |   |  [  |  ]  |     |     |  /| |      |
     //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
     &kp TAB    &kp N1    &kp N2    &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8   &kp N9    &kp N0    &kp DEL
-    &kp CAPS   &trans    &kp LBKT  &kp RBKT     &kp LPAR     &kp RPAR       &kp LARW &kp DARW  &kp UARW &kp RARW  &kp MINUS &kp EQUAL
+    &trans     &kp CAPS  &kp LBKT  &kp RBKT     &kp LPAR     &kp RPAR       &kp LARW &kp DARW  &kp UARW &kp RARW  &kp MINUS &kp EQUAL
     &trans     &trans    &kp LBRC  &kp RBRC     &trans       &trans         &kp LBKT &kp RBKT &trans   &trans    &kp BSLH     &trans
                                    &kp LGUI     &trans     &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
@@ -72,12 +72,12 @@
     // -----------------------------------------------------------------------------------------
     // |      |  !    |  @    |  #     |  $  |  %  |   |  ^        |  &         |  *      |  (           |  )  |      |
     // |      |       |  M_UP |        |     |     |   | SCRL_LEFT | SCRL_DOWN  | SCRL_UP | SCRL_RIGHT   |     |  `   |
-    // |      |  M_LT |  M_DN |  M_RT  |     |     |   |           |            |         |              |     |  ~   |
+    // |      |  M_LT |  M_DN |  M_RT  |     |     |   | M_LEFT    | M_RIGHT    |         |              |     |  ~   |
     //                    | GUI |     | SPC |   | ENT |            | ALT     |
                         bindings = <
     &trans &kp EXCL        &kp AT          &kp HASH         &kp DLLR &kp PRCNT   &kp CARET         &kp AMPS          &kp ASTRK       &kp LPAR          &kp RPAR &trans
     &trans &trans          &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
-    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &trans            &trans            &trans          &trans            &trans   &trans
+    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &mkp LCLK         &mkp RCLK         &trans          &trans            &trans   &kp TILDE
                               &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -85,13 +85,13 @@
                 forth_layer {
     // --------------------------------------------------------------------------------------------------
     // |        |  F1 |  F2 |  F3  |  F4  |  F5   |   |  F6    | F7      | F8        | F9  |     | BSPC |
-    // | BT_CLR | BT0 | BT1 | BT2  | PREV | NXT   |   | F10    | F11     | F12       |     |     |      |
-    // |        |     |     | VMUT | VDWN | VUP   |   | PAUSE  | -BRIGHT |  +BRIGHT  |     |     |      |
+    // |        | BT0 | BT1 | BT2  | PREV | NXT   |   | F10    | F11     | F12       |     |     |      |
+    // | BT_CLR |     |     | VMUT | VDWN | VUP   |   | PAUSE  | -BRIGHT |  +BRIGHT  |     |     |      |
     //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
     &trans      &kp F1       &kp F2       &kp F3         &kp F4            &kp F5         &kp F6           &kp F7          &kp F8          &kp F9  &trans &kp BSPC
-    &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &kp C_PREV        &kp C_NEXT     &kp F10          &kp F11         &kp F12         &trans  &trans &trans
-    &trans      &trans       &trans       &kp C_MUTE     &kp C_VOL_DN    &kp C_VOL_UP     &kp C_PP         &kp C_BRI_DEC   &kp C_BRI_UP    &trans &trans &trans
+    &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2   &kp C_PREV        &kp C_NEXT     &kp F10          &kp F11         &kp F12         &trans  &trans &trans
+    &bt BT_CLR  &trans       &trans       &kp C_MUTE     &kp C_VOL_DN      &kp C_VOL_UP   &kp C_PP         &kp C_BRI_DEC   &kp C_BRI_UP    &trans  &trans &trans
                                   &kp LGUI     &trans       &kp SPACE   &kp RET  &trans   &kp RALT
                         >;
                 };
