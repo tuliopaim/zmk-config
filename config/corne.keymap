@@ -15,9 +15,9 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht LALT k2   &ht RCTRL k3  &ht RSHFT k4
 
 #define DFLT 0
-#define SCND 1
-#define THRD 2
-#define FRTH 3
+#define FRST 1
+#define SCND 2
+#define THRD 3
 
 / {
     behaviors {
@@ -52,7 +52,7 @@
     &gresc    &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U   &kp I      &kp O   &kp P    &kp BSPC
     &kp LSHFT HRML(A,   S,    D,   F) &kp G             &kp H HRMR(J,     K,         L,   SEMI)   &kp SQT
     &kp LCTRL &kp Z &kp X &kp C &kp V &kp B             &kp N &kp M   &kp COMMA  &kp PERIOD &kp FSLH &kp RET
-                  &kp LGUI &mo SCND    &lt FRTH SPACE   &kp RET &mo THRD &kp RALT
+                  &kp LGUI &mo FRST    &lt THRD SPACE   &kp RET &mo SCND &kp RALT
                         >;
                 };
                 second_layer {
@@ -77,7 +77,7 @@
                         bindings = <
     &trans &kp EXCL        &kp AT          &kp HASH         &kp DLLR &kp PRCNT   &kp CARET         &kp AMPS          &kp ASTRK       &kp LPAR          &kp RPAR &trans
     &trans &trans          &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
-    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &trans    &trans    &trans    &trans   &trans   &trans
+    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &trans            &trans            &trans          &trans            &trans   &trans
                               &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
