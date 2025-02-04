@@ -21,12 +21,6 @@
 
 / {
     behaviors {
-        gresc: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-        };
          ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -44,12 +38,12 @@
 
             default_layer {
     // -----------------------------------------------------------------------------------------
-    // | ESC/~|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+    // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
     // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
     // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
     //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-    &gresc    &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U   &kp I      &kp O   &kp P    &kp BSPC
+    &kp ESC    &kp Q &kp W &kp E &kp R &kp T             &kp Y &kp U   &kp I      &kp O   &kp P    &kp BSPC
     &kp LSHFT HRML(A,   S,    D,   F) &kp G             &kp H HRMR(J,     K,         L,   SEMI)   &kp SQT
     &kp LCTRL &kp Z &kp X &kp C &kp V &kp B             &kp N &kp M   &kp COMMA  &kp PERIOD &kp FSLH &kp RET
                   &kp LGUI &mo FRST    &lt THRD SPACE   &kp RET &mo SCND &kp RALT
@@ -70,14 +64,14 @@
                 };
                 third_layer {
     // -----------------------------------------------------------------------------------------
-    // |      |  !    |  @    |  #     |  $  |  %  |   |  ^        |  &         |  *      |  (           |  )  |      |
+    // |  ˜   |  !    |  @    |  #     |  $  |  %  |   |  ^        |  &         |  *      |  (           |  )  |      |
     // |      |       |  M_UP |        |     |     |   | SCRL_LEFT | SCRL_DOWN  | SCRL_UP | SCRL_RIGHT   |     |  `   |
     // |      |  M_LT |  M_DN |  M_RT  |     |     |   | M_LEFT    | M_RIGHT    |         |              |     |  ~   |
     //                    | GUI |     | SPC |   | ENT |            | ALT     |
                         bindings = <
-    &trans &kp EXCL        &kp AT          &kp HASH         &kp DLLR &kp PRCNT   &kp CARET         &kp AMPS          &kp ASTRK       &kp LPAR          &kp RPAR &trans
-    &trans &trans          &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
-    &trans &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &mkp LCLK         &mkp RCLK         &trans          &trans            &trans   &kp TILDE
+    &kp TILDE &kp EXCL        &kp AT          &kp HASH         &kp DLLR &kp PRCNT   &kp CARET         &kp AMPS          &kp ASTRK       &kp LPAR          &kp RPAR &trans
+    &trans    &trans          &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
+    &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &mkp LCLK         &mkp RCLK         &trans          &trans            &trans   &kp TILDE
                               &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
