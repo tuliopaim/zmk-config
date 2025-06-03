@@ -52,12 +52,12 @@
                 first_layer {
     // -----------------------------------------------------------------------------------------
     // |  TAB |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-    // |      | CAPS |     |     |  (  |  )  |   | LFT | DWN |  UP | RGT |  -_ |  +=  |
+    // |      |      |     |     |  (  |  )  |   | LFT | DWN |  UP | RGT |  -_ |  +=  |
     // | SHFT |      |     |     |     |     |   |  [  |  ]  |     |     |  /| |      |
     //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
     &kp TAB    &kp N1    &kp N2    &kp N3     &kp N4       &kp N5         &kp N6   &kp N7    &kp N8   &kp N9    &kp N0    &kp DEL
-    &trans     &kp CAPS  &trans    &trans     &kp LPAR     &kp RPAR       &kp LARW &kp DARW  &kp UARW &kp RARW  &kp MINUS &kp EQUAL
+    &trans     &trans  &trans    &trans     &kp LPAR     &kp RPAR       &kp LARW &kp DARW  &kp UARW &kp RARW  &kp MINUS &kp EQUAL
     &trans     &trans    &trans    &trans     &trans       &trans         &kp LBKT &kp RBKT &trans   &trans    &kp BSLH     &trans
                                    &kp LGUI     &trans     &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
@@ -65,12 +65,12 @@
                 second_layer {
     // -----------------------------------------------------------------------------------------
     // |  ˜   |  !    |  @    |  #     |  $  |  %  |   |  ^        |  &         |  *      |  (           |  )  |      |
-    // |      |       |  M_UP |        |     |     |   | SCRL_LEFT | SCRL_DOWN  | SCRL_UP | SCRL_RIGHT   |     |  `   |
+    // |      | CAPS  |  M_UP |        |     |     |   | SCRL_LEFT | SCRL_DOWN  | SCRL_UP | SCRL_RIGHT   |     |  `   |
     // |      |  M_LT |  M_DN |  M_RT  |     |     |   | M_LEFT    | M_RIGHT    |         |              |     |  ~   |
     //                    | GUI |     | SPC |   | ENT |            | ALT     |
                         bindings = <
     &kp TILDE &kp EXCL        &kp AT          &kp HASH         &kp DLLR &kp PRCNT   &kp CARET         &kp AMPS          &kp ASTRK       &kp LPAR          &kp RPAR &trans
-    &trans    &trans          &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
+    &trans    &kp CAPS        &mmv MOVE_UP    &kp RBKT         &trans   &trans      &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP    &msc SCRL_RIGHT   &trans   &kp GRAVE
     &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans      &mkp LCLK         &mkp RCLK         &trans          &trans            &trans   &kp TILDE
                               &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
